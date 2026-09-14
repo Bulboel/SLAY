@@ -19,7 +19,7 @@
         <div class="inventory" aria-live="polite">
           <div class="bag"><span class="orb">◉</span> <span id="ballCount">0</span> Slayboule<span id="ballPlural">s</span></div>
           <button id="mapButton" class="item-button" hidden>🗺 Carte</button>
-          <div id="creamBadge" class="bag" hidden>✨ Crème de jour ×1</div>
+          <button id="creamBadge" class="item-button" hidden>✨ Crème de jour ×<span id="creamCount">1</span></button>
         </div>
       </div>
       <div id="stage" class="stage">
@@ -49,10 +49,18 @@
           <div class="map-panel">
             <div class="map-heading"><div><small>CARTE DU MONDE</small><strong>HACKÉNIA</strong></div><button id="closeMap" aria-label="Fermer la carte">×</button></div>
             <div class="map-scroll">
-              <img src="assets/hackenia-world-map.jpeg" alt="Carte illustrée du continent d’Hackénia. Bitch City se trouve tout au sud, à l’emplacement nommé Emak sur cette ancienne carte.">
-              <span class="bitch-marker">★ BITCH CITY<small>anciennement Emak</small></span>
+              <img src="assets/hackenia-world-map-v2.jpeg" alt="Carte simplifiée du continent d’Hackénia. Seule Bitch City, au sud, est actuellement identifiée.">
             </div>
-            <p>Tu commences tout au sud. La Route 28 mène à <strong>Talentia</strong>, puis le voyage continue vers <strong>Pariche</strong>.</p>
+            <p>Tu commences tout au sud. Les autres destinations apparaîtront sur la carte lorsque tu les découvriras.</p>
+          </div>
+        </div>
+        <div id="creamMenu" class="item-overlay" hidden>
+          <div class="item-panel">
+            <strong>CRÈME DE JOUR</strong>
+            <p>Que veux-tu en faire ?</p>
+            <button data-cream-use="slay">Soigner Sexyflex · +20 PV</button>
+            <button data-cream-use="player">Obtenir un teint radieux · 1 jour</button>
+            <button data-cream-use="keep" class="secondary">La garder pour plus tard</button>
           </div>
         </div>
       </div>

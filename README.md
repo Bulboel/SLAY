@@ -16,6 +16,8 @@ Prototype web original d’un mini-RPG de capture de créatures à Hackénia.
 - Caméra mobile et Route 28 beaucoup plus longue à explorer
 - Base prévue pour les Slaymatchs, la capture et le runway
 - Fondations prévues pour les affinités, la séduction et les compagnons
+- Déplacement continu lorsque la touche directionnelle reste enfoncée
+- Crème de jour conservée dans l’inventaire jusqu’au choix du joueur
 
 ## Jouer localement
 
