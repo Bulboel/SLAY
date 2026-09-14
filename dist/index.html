@@ -16,7 +16,11 @@
     <section class="game-card">
       <div class="topbar">
         <div class="brand"><span class="spark">✦</span> BITCH CITY <small>V0.0.1</small></div>
-        <div class="bag" aria-live="polite"><span class="orb">◉</span> <span id="ballCount">0</span> Slayboule<span id="ballPlural">s</span></div>
+        <div class="inventory" aria-live="polite">
+          <div class="bag"><span class="orb">◉</span> <span id="ballCount">0</span> Slayboule<span id="ballPlural">s</span></div>
+          <button id="mapButton" class="item-button" hidden>🗺 Carte</button>
+          <div id="creamBadge" class="bag" hidden>✨ Crème de jour ×1</div>
+        </div>
       </div>
       <div id="stage" class="stage">
         <canvas id="game" width="640" height="480" aria-label="Zone de jeu. Utilisez les flèches ou ZQSD pour vous déplacer et Espace pour interagir."></canvas>
@@ -39,6 +43,16 @@
             <strong id="speaker"></strong>
             <p id="dialogueText"></p>
             <span class="continue">Espace <b>▼</b></span>
+          </div>
+        </div>
+        <div id="worldMap" class="map-overlay" hidden>
+          <div class="map-panel">
+            <div class="map-heading"><div><small>CARTE DU MONDE</small><strong>HACKÉNIA</strong></div><button id="closeMap" aria-label="Fermer la carte">×</button></div>
+            <div class="map-scroll">
+              <img src="assets/hackenia-world-map.jpeg" alt="Carte illustrée du continent d’Hackénia. Bitch City se trouve tout au sud, à l’emplacement nommé Emak sur cette ancienne carte.">
+              <span class="bitch-marker">★ BITCH CITY<small>anciennement Emak</small></span>
+            </div>
+            <p>Tu commences tout au sud. La Route 28 mène à <strong>Talentia</strong>, puis le voyage continue vers <strong>Pariche</strong>.</p>
           </div>
         </div>
       </div>

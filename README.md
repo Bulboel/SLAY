@@ -8,10 +8,13 @@ Prototype web original d’un mini-RPG de capture de créatures à Hackénia.
 - Maison du joueur et Sexyflex
 - Bitch City avec quatre maisons, deux encore libres
 - Maison de Mritto et Fratmentali
-- Remise de cinq Slayboules
+- Remise de dix Slayboules
+- Carte d’Hackénia offerte par Fratmentali
 - Slayhouse tenue par Nicki Doll
-- Route 28 vers la petite ville de Lefilip, puis Pariche
+- Route 28 vers Talentia, la ville de Lefilip, puis Pariche
+- Première rencontre avec Jason et obtention de la Crème de jour
 - Base prévue pour les Slaymatchs, la capture et le runway
+- Fondations prévues pour les affinités, la séduction et les compagnons
 
 ## Jouer localement
 
