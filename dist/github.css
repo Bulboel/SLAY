@@ -50,4 +50,25 @@
 .item-panel p { margin: 0 0 5px; }
 .item-panel button { border: 0; border-radius: 7px; background: #ff5cb8; color: white; padding: 11px; font: 900 .9rem inherit; cursor: pointer; }
 .item-panel button.secondary { background: #4a3a5f; }
+.choice-panel #choiceButtons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.battle-screen { position: absolute; inset: 0; z-index: 10; display: grid; grid-template-rows: 1fr auto; background: #79d6e5; color: #201832; }
+.battle-screen[hidden] { display: none; }
+.battle-sky { position: relative; overflow: hidden; background: linear-gradient(#71d7ec 0 60%,#b6e487 60%); }
+.battle-sky::after { content:""; position:absolute; left:0; right:0; bottom:0; height:42%; background:repeating-linear-gradient(0deg,#76bd69 0 8px,#83ca72 8px 16px); }
+.fighter { position: absolute; z-index: 1; display: flex; align-items: center; gap: 18px; }
+.enemy-fighter { top: 45px; right: 55px; }
+.player-fighter { left: 48px; bottom: 28px; }
+.battle-slay { width: 94px; height: 94px; display:grid; place-items:center; border-radius:42% 55% 48% 44%; background:#44336d; border:7px solid #2a2042; color:#62e9db; font-size:2rem; box-shadow:0 10px 0 #5a9a58; }
+.battle-slay.sexy { width:112px; height:104px; background:#e96d40; color:#ffe05f; border-radius:45% 45% 38% 38%; }
+.hp-card { width: 190px; background:#fff8df; border:4px solid #201832; border-radius:9px; padding:9px 11px; box-shadow:4px 4px 0 #34264d; }
+.hp-card strong { display:block; font-size:.85rem; letter-spacing:.07em; }
+.hp-track { height:10px; margin:6px 0 3px; border:2px solid #201832; background:#ded3bb; }
+.hp-track i { display:block; height:100%; width:100%; background:#64cf70; transition:width .25s; }
+.hp-card small { font-weight:800; }
+.battle-command { background:#fff8df; border-top:5px solid #201832; padding:13px 18px; }
+.battle-command p { margin:0 0 10px; font-weight:900; }
+.battle-command div { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
+.battle-command button { border:0; border-bottom:4px solid #9b296c; border-radius:7px; background:#ee4fa3; color:white; padding:10px 6px; font:900 .72rem inherit; cursor:pointer; }
+.battle-command button.secondary { background:#514267; border-bottom-color:#2d2440; }
+@media(max-width:700px){.enemy-fighter{right:15px}.player-fighter{left:15px}.battle-slay{width:72px;height:72px}.battle-slay.sexy{width:84px;height:78px}.hp-card{width:140px}.battle-command{padding:9px}.battle-command button{font-size:.6rem}}
 

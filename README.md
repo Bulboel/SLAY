@@ -13,6 +13,10 @@ Prototype web original d’un mini-RPG de capture de créatures à Hackénia.
 - Slayhouse tenue par Nicki Doll
 - Route 28 vers Talentia, la ville de Lefilip, puis Pariche
 - Première rencontre avec Jason et obtention de la Crème de jour
+- Animation de marche à deux poses et déplacement continu plus précis
+- Route 28 déplacée au nord, plage au sud et futures extensions à l’est et à l’ouest
+- Premiers Slaymatchs facultatifs contre Mritto et Fratmentali
+- Premier choix relationnel avec Jason après avoir utilisé la Crème de jour sur le joueur
 - Caméra mobile et Route 28 beaucoup plus longue à explorer
 - Base prévue pour les Slaymatchs, la capture et le runway
 - Fondations prévues pour les affinités, la séduction et les compagnons

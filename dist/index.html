@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#1d1630">
   <meta name="description" content="Explore Bitch City dans ce mini-RPG original de capture de Slays.">
-  <title>Bitch City — Slay RPG</title>
+  <title>SLAY</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23201832'/%3E%3Cpath d='M12 34 23 23l9 8 9-8 11 11-20 20z' fill='%23ff5cb8'/%3E%3Ccircle cx='32' cy='31' r='8' fill='%23ffe76a'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="github.css">
@@ -15,7 +15,7 @@
   <main class="shell" aria-label="Bitch City, mini jeu de rôle">
     <section class="game-card">
       <div class="topbar">
-        <div class="brand"><span class="spark">✦</span> BITCH CITY <small>V0.0.1</small></div>
+        <div class="brand"><span class="spark">✦</span> SLAY <small>V0.0.2</small></div>
         <div class="inventory" aria-live="polite">
           <div class="bag"><span class="orb">◉</span> <span id="ballCount">0</span> Slayboule<span id="ballPlural">s</span></div>
           <button id="mapButton" class="item-button" hidden>🗺 Carte</button>
@@ -27,7 +27,7 @@
         <div id="titleScreen" class="title-screen">
           <div class="title-art" aria-hidden="true"><span>✦</span><span>✿</span><span>◆</span></div>
           <p class="eyebrow">UNE AVENTURE À HACKÉNIA</p>
-          <h1>BITCH<br><em>CITY</em></h1>
+          <h1><em>SLAY</em></h1>
           <p class="subtitle">Le premier pas vers la gloire. Et l’arène.</p>
           <label class="name-field">Nom du dresseur
             <input id="playerName" maxlength="12" value="Bulbo" autocomplete="off">
@@ -61,6 +61,23 @@
             <button data-cream-use="slay">Soigner Sexyflex · +20 PV</button>
             <button data-cream-use="player">Obtenir un teint radieux · 1 jour</button>
             <button data-cream-use="keep" class="secondary">La garder pour plus tard</button>
+          </div>
+        </div>
+        <div id="choiceMenu" class="item-overlay" hidden>
+          <div class="item-panel choice-panel">
+            <strong id="choiceTitle">CHOIX</strong>
+            <p id="choiceText"></p>
+            <div id="choiceButtons"></div>
+          </div>
+        </div>
+        <div id="battleScreen" class="battle-screen" hidden>
+          <div class="battle-sky">
+            <div class="fighter enemy-fighter"><div id="enemySprite" class="battle-slay">✦</div><div class="hp-card"><strong id="enemyName">SLAY</strong><div class="hp-track"><i id="enemyHp"></i></div><small id="enemyHpText"></small></div></div>
+            <div class="fighter player-fighter"><div class="hp-card"><strong>SEXYFLEX</strong><div class="hp-track"><i id="playerHp"></i></div><small id="playerHpText"></small></div><div class="battle-slay sexy">✦</div></div>
+          </div>
+          <div class="battle-command">
+            <p id="battleText">Que doit faire Sexyflex ?</p>
+            <div><button data-battle="attack">FLEX FRACASSANT</button><button data-battle="pose">POSE ICONIQUE</button><button data-battle="run" class="secondary">ARRÊTER</button></div>
           </div>
         </div>
       </div>
