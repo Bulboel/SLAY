@@ -1,0 +1,29 @@
+.name-field {
+  display: grid;
+  gap: 6px;
+  justify-self: center;
+  width: min(260px, 80vw);
+  color: #8bf0e5;
+  font-size: .75rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.name-field input {
+  width: 100%;
+  border: 3px solid #fff8df;
+  border-radius: 8px;
+  background: #201832;
+  color: #fff8df;
+  padding: 9px 12px;
+  font: 900 1rem "Trebuchet MS", system-ui, sans-serif;
+  text-align: center;
+  outline: none;
+}
+
+.name-field input:focus {
+  border-color: #57e7ee;
+  box-shadow: 0 0 0 3px #57e7ee44;
+}
+
