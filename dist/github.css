@@ -70,5 +70,12 @@
 .battle-command div { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
 .battle-command button { border:0; border-bottom:4px solid #9b296c; border-radius:7px; background:#ee4fa3; color:white; padding:10px 6px; font:900 .72rem inherit; cursor:pointer; }
 .battle-command button.secondary { background:#514267; border-bottom-color:#2d2440; }
+.stage { border-top: 2px solid #a98aca; border-bottom: 2px solid #100a1b; box-shadow: inset 0 0 40px #140d2470; }
+.stage::after { content:""; position:absolute; inset:0; z-index:2; pointer-events:none; box-shadow:inset 0 0 34px #120b2270; }
+.dialogue,.item-panel,.hp-card { border-radius:12px; }
+.dialogue { background:linear-gradient(135deg,#fffdf0,#fff1ca); }
+.topbar { background:linear-gradient(90deg,#201832,#3b2456 48%,#201832); }
+.brand { text-shadow:0 2px 0 #08050e; }
+.battle-command button { min-height:45px; }
 @media(max-width:700px){.enemy-fighter{right:15px}.player-fighter{left:15px}.battle-slay{width:72px;height:72px}.battle-slay.sexy{width:84px;height:78px}.hp-card{width:140px}.battle-command{padding:9px}.battle-command button{font-size:.6rem}}
 

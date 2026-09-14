@@ -17,6 +17,9 @@ Prototype web original d’un mini-RPG de capture de créatures à Hackénia.
 - Route 28 déplacée au nord, plage au sud et futures extensions à l’est et à l’ouest
 - Premiers Slaymatchs facultatifs contre Mritto et Fratmentali
 - Premier choix relationnel avec Jason après avoir utilisé la Crème de jour sur le joueur
+- Jason déménage dans la maison du joueur et peut proposer une escapade à la plage
+- Attaques de Sexyflex basées sur statistiques : « Ma main dans ta gueule » et « T’as vu mes pecs ? »
+- Nouveau décor pixel-art original pour l’herbe, la plage, les arbres et les bâtiments
 - Caméra mobile et Route 28 beaucoup plus longue à explorer
 - Base prévue pour les Slaymatchs, la capture et le runway
 - Fondations prévues pour les affinités, la séduction et les compagnons
