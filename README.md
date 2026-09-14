@@ -20,6 +20,10 @@ Prototype web original d’un mini-RPG de capture de créatures à Hackénia.
 - Jason déménage dans la maison du joueur et peut proposer une escapade à la plage
 - Attaques de Sexyflex basées sur statistiques : « Ma main dans ta gueule » et « T’as vu mes pecs ? »
 - Nouveau décor pixel-art original pour l’herbe, la plage, les arbres et les bâtiments
+- Portraits de dialogue de Mritto et Fratmentali d’après leurs références
+- Sprites de carte animés de Mritto et Fratmentali, avec marche et clignement
+- Quatre états de combat illustrés pour Sexyflex et Dantonlix : normal, attaque, blessé et à terre
+- Herbe sans quadrillage, plage redessinée et bâtiments conservant leurs proportions
 - Caméra mobile et Route 28 beaucoup plus longue à explorer
 - Base prévue pour les Slaymatchs, la capture et le runway
 - Fondations prévues pour les affinités, la séduction et les compagnons

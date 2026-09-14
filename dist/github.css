@@ -60,6 +60,15 @@
 .player-fighter { left: 48px; bottom: 28px; }
 .battle-slay { width: 94px; height: 94px; display:grid; place-items:center; border-radius:42% 55% 48% 44%; background:#44336d; border:7px solid #2a2042; color:#62e9db; font-size:2rem; box-shadow:0 10px 0 #5a9a58; }
 .battle-slay.sexy { width:112px; height:104px; background:#e96d40; color:#ffe05f; border-radius:45% 45% 38% 38%; }
+.battle-slay { width:150px; height:145px; border:0; border-radius:0; background-color:transparent; background-repeat:no-repeat; background-size:200% 200%; box-shadow:none; filter:drop-shadow(0 10px 3px #315f4266); transition:transform .18s,filter .18s; }
+.battle-slay.sexy { width:170px; height:155px; border-radius:0; background-color:transparent; background-image:url("assets/sexyflex-battle-v1.png"); }
+.battle-slay.dantonlix { background-image:url("assets/dantonlix-battle-v1.png"); }
+.battle-slay.veloursa { border:7px solid #9b4e80; border-radius:45%; background:#e97eb6; }
+.battle-slay.normal { background-position:0 0; }
+.battle-slay.attack { background-position:100% 0; transform:translateX(-8px) scale(1.05); }
+.battle-slay.hit { background-position:0 100%; filter:drop-shadow(0 10px 3px #315f4266) brightness(.75) saturate(.5); transform:translateX(8px); }
+.battle-slay.down { background-position:100% 100%; filter:drop-shadow(0 5px 2px #315f4244) saturate(.7); }
+.portrait[style*="url"]::after { display:none; }
 .hp-card { width: 190px; background:#fff8df; border:4px solid #201832; border-radius:9px; padding:9px 11px; box-shadow:4px 4px 0 #34264d; }
 .hp-card strong { display:block; font-size:.85rem; letter-spacing:.07em; }
 .hp-track { height:10px; margin:6px 0 3px; border:2px solid #201832; background:#ded3bb; }
@@ -77,5 +86,5 @@
 .topbar { background:linear-gradient(90deg,#201832,#3b2456 48%,#201832); }
 .brand { text-shadow:0 2px 0 #08050e; }
 .battle-command button { min-height:45px; }
-@media(max-width:700px){.enemy-fighter{right:15px}.player-fighter{left:15px}.battle-slay{width:72px;height:72px}.battle-slay.sexy{width:84px;height:78px}.hp-card{width:140px}.battle-command{padding:9px}.battle-command button{font-size:.6rem}}
+@media(max-width:700px){.enemy-fighter{right:15px}.player-fighter{left:15px}.battle-slay{width:105px;height:100px}.battle-slay.sexy{width:116px;height:108px}.hp-card{width:140px}.battle-command{padding:9px}.battle-command button{font-size:.6rem}}
 
