@@ -7,15 +7,15 @@
   <meta name="description" content="Explore Bitch City dans ce mini-RPG original de capture de Slays.">
   <title>SLAY</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23201832'/%3E%3Cpath d='M12 34 23 23l9 8 9-8 11 11-20 20z' fill='%23ff5cb8'/%3E%3Ccircle cx='32' cy='31' r='8' fill='%23ffe76a'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="github.css">
+  <link rel="stylesheet" href="styles.css?v=003">
+  <link rel="stylesheet" href="github.css?v=003">
   <style>.title-screen[hidden]{display:none}</style>
 </head>
 <body>
   <main class="shell" aria-label="Bitch City, mini jeu de rôle">
     <section class="game-card">
       <div class="topbar">
-        <div class="brand"><span class="spark">✦</span> SLAY <small>V0.0.2</small></div>
+        <div class="brand"><span class="spark">✦</span> SLAY <small>V0.0.3</small></div>
         <div class="inventory" aria-live="polite">
           <div class="bag"><span class="orb">◉</span> <span id="ballCount">0</span> Slayboule<span id="ballPlural">s</span></div>
           <button id="mapButton" class="item-button" hidden>🗺 Carte</button>
@@ -32,6 +32,11 @@
           <label class="name-field">Nom du dresseur
             <input id="playerName" maxlength="12" value="Bulbo" autocomplete="off">
           </label>
+          <div class="character-creator" aria-label="Création du personnage">
+            <label>Silhouette<select id="playerGender"><option value="masc">Masculine</option><option value="fem">Féminine</option><option value="neutral">Non-binaire</option></select></label>
+            <label>Tenue<select id="playerOutfit"><option value="adventure">Aventure</option><option value="runway">Runway</option><option value="sport">Sport chic</option></select></label>
+            <label>Cheveux<select id="playerHair"><option value="short">Courts</option><option value="long">Longs</option><option value="crest">Crête</option><option value="bald">Crâne rasé</option></select></label>
+          </div>
           <button id="startButton">Commencer</button>
           <p class="hint">Flèches / ZQSD · Espace pour interagir</p>
         </div>
@@ -93,7 +98,7 @@
       <footer><span id="objective">Objectif : sortir de chez Bulbo</span><button id="resetButton">Recommencer</button></footer>
     </section>
   </main>
-  <script src="game.js"></script>
+  <script src="game.js?v=003"></script>
 </body>
 </html>
 
