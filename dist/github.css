@@ -133,6 +133,5 @@
   .shell{width:min(100%,1240px,calc((100vh - 132px)*4/3))}
 }
 
-.battle-screen.indoors .battle-sky{background:linear-gradient(#20183277,#20183222),url("assets/home-interior-v1.png") center/cover no-repeat}
+.battle-screen.indoors .battle-sky{background:linear-gradient(#20183277,#20183222),url("assets/home-interior-v2.png") center/cover no-repeat}
 .battle-screen.indoors .fighter::before{background:radial-gradient(ellipse,#d9bf8f 0 48%,#765c42 51% 61%,transparent 63%)}
-
