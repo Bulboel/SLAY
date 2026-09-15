@@ -100,3 +100,24 @@
 .battle-command button { min-height:45px; }
 @media(max-width:700px){.character-creator{grid-template-columns:1fr;gap:4px}.character-creator select{padding:5px}.title-screen{padding:10px}.title-screen h1{font-size:3.6rem}.enemy-fighter{right:8px}.player-fighter{left:8px}.battle-slay,.battle-slay.dantonlix{width:125px;height:115px}.battle-slay.sexy{width:140px;height:125px}.hp-card{width:130px}.battle-command{padding:9px}.battle-command button{font-size:.6rem}.dialogue{grid-template-columns:82px 1fr;min-height:116px}.portrait{min-height:95px}}
 
+/* Arène de Slaymatch : fond simple et lisible, sans damier dans les créatures. */
+.battle-sky { background:linear-gradient(#d9f5f0 0 55%,#f7efd0 55% 100%); }
+.battle-sky::after { display:none; }
+.fighter { isolation:isolate; }
+.fighter::before { content:""; position:absolute; z-index:-1; width:270px; height:66px; border-radius:50%; background:radial-gradient(ellipse,#78be62 0 48%,#4d9250 51% 61%,transparent 63%); filter:drop-shadow(0 7px 0 #b9a97988); }
+.enemy-fighter::before { left:-42px; top:142px; transform:scale(.82); }
+.player-fighter::before { right:-40px; top:150px; transform:scale(1.08); }
+.battle-slay,.battle-slay.sexy,.battle-slay.dantonlix { background-size:contain; background-position:center; background-repeat:no-repeat; }
+.battle-slay.sexy.normal { background-image:url("assets/sexyflex-normal-v3.png"); }
+.battle-slay.sexy.attack { background-image:url("assets/sexyflex-attack-v3.png"); }
+.battle-slay.sexy.hit { background-image:url("assets/sexyflex-hit-v3.png"); }
+.battle-slay.sexy.down { background-image:url("assets/sexyflex-down-v3.png"); }
+.battle-slay.dantonlix.normal { background-image:url("assets/dantonlix-normal-v3.png"); }
+.battle-slay.dantonlix.attack { background-image:url("assets/dantonlix-attack-v3.png"); }
+.battle-slay.dantonlix.hit { background-image:url("assets/dantonlix-hit-v3.png"); }
+.battle-slay.dantonlix.down { background-image:url("assets/dantonlix-down-v3.png"); }
+.battle-slay.normal,.battle-slay.attack,.battle-slay.hit,.battle-slay.down { background-position:center; }
+.battle-slay.attack { transform:translateX(-12px) scale(1.06); }
+.battle-slay.hit { transform:translateX(9px); }
+@media(max-width:700px){.fighter::before{width:170px;height:44px}.enemy-fighter::before{top:85px}.player-fighter::before{top:92px}}
+

@@ -26,6 +26,10 @@ Prototype web original d’un mini-RPG de capture de créatures à Hackénia.
 - Sprites de carte animés de Mritto et Fratmentali
 - Quatre attitudes de combat pour Sexyflex et Dantonlix : normal, attaque, touché et à terre
 - Passages élargis vers les futures extensions Est et Ouest
+- Nicky Doll possède désormais son portrait et ses animations dédiées
+- Nouvelle échelle commune pour le héros, Mritto, Frat et les autres personnages
+- Sprites hors combat pour Sexyflex, Dantonlix et Veloursa
+- Intérieurs détaillés et écran de Slaymatch sur plateformes végétales
 - Sprites de carte animés de Mritto et Fratmentali, avec marche et clignement
 - Quatre états de combat illustrés pour Sexyflex et Dantonlix : normal, attaque, blessé et à terre
 - Herbe sans quadrillage, plage redessinée et bâtiments conservant leurs proportions
