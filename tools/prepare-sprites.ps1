@@ -3,6 +3,7 @@ param(
   [string]$AssetDir = (Join-Path $PSScriptRoot '..\dist\assets')
 )
 
+$ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 
 function New-TransparentCrop {
@@ -31,7 +32,7 @@ function Split-BattleSheet {
 
 function Normalize-Strip {
   param([string]$SourcePath,[string]$Output)
-  $source=[System.Drawing.Bitmap]::FromFile($SourcePath); $cellW=[int]($source.Width/4); $cellH=$source.Height
+  $source=[System.Drawing.Bitmap]::FromFile($SourcePath); $cellW=[int][Math]::Floor($source.Width/4); $cellH=$source.Height
   $target=[System.Drawing.Bitmap]::new(384,96,[System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
   $tg=[System.Drawing.Graphics]::FromImage($target); $tg.Clear([System.Drawing.Color]::Transparent); $tg.InterpolationMode=[System.Drawing.Drawing2D.InterpolationMode]::NearestNeighbor
   for($i=0;$i -lt 4;$i++) {
@@ -41,6 +42,16 @@ function Normalize-Strip {
     $tg.DrawImage($source,[System.Drawing.Rectangle]::new($dx,$dy,$dw,$dh),[System.Drawing.Rectangle]::new($i*$cellW+$minX,$minY,$cw,$ch),[System.Drawing.GraphicsUnit]::Pixel)
   }
   $tg.Dispose();$target.Save($Output,[System.Drawing.Imaging.ImageFormat]::Png);$target.Dispose();$source.Dispose()
+}
+
+function Compose-DantonlixStrip {
+  $normal=[System.Drawing.Bitmap]::FromFile((Join-Path $AssetDir 'dantonlix-normal-v3.png'))
+  $attack=[System.Drawing.Bitmap]::FromFile((Join-Path $AssetDir 'dantonlix-attack-v3.png'))
+  $source=[System.Drawing.Bitmap]::new(1536,384,[System.Drawing.Imaging.PixelFormat]::Format32bppArgb)
+  $g=[System.Drawing.Graphics]::FromImage($source);$g.Clear([System.Drawing.Color]::Transparent)
+  $g.DrawImageUnscaled($normal,0,0);$g.DrawImageUnscaled($normal,384,0);$g.DrawImageUnscaled($attack,768,0);$g.DrawImageUnscaled($normal,1152,0)
+  $g.Dispose();$normal.Dispose();$attack.Dispose();$temp=Join-Path $AssetDir '_dantonlix-map-source.png';$source.Save($temp,[System.Drawing.Imaging.ImageFormat]::Png);$source.Dispose()
+  Normalize-Strip $temp (Join-Path $AssetDir 'dantonlix-map-v1.png');Remove-Item -LiteralPath $temp
 }
 
 function Test-SpriteAsset {
@@ -76,9 +87,15 @@ Split-BattleSheet (Join-Path $AssetDir 'sexyflex-battle-v2.png') 'sexyflex'
 Split-BattleSheet (Join-Path $AssetDir 'dantonlix-battle-v2.png') 'dantonlix'
 Normalize-Strip (Join-Path $AssetDir 'sexyflex-map-v1.png') (Join-Path $AssetDir 'sexyflex-map-v2.png')
 Normalize-Strip (Join-Path $AssetDir 'veloursa-map-v1.png') (Join-Path $AssetDir 'veloursa-map-v2.png')
+Normalize-Strip (Join-Path $AssetDir 'mritto-map-source-v1.png') (Join-Path $AssetDir 'mritto-map-v3.png')
+Normalize-Strip (Join-Path $AssetDir 'frat-map-source-v1.png') (Join-Path $AssetDir 'frat-map-v3.png')
+Compose-DantonlixStrip
 
 @('sexyflex','dantonlix') | ForEach-Object { $name=$_; @('normal','attack','hit','down') | ForEach-Object { Test-SpriteAsset (Join-Path $AssetDir "$name-$_-v3.png") 384 384 } }
 Test-SpriteAsset (Join-Path $AssetDir 'sexyflex-map-v2.png') 384 96
 Test-SpriteAsset (Join-Path $AssetDir 'veloursa-map-v2.png') 384 96
 Test-SpriteAsset (Join-Path $AssetDir 'nicky-map-v1.png') 256 80
+Test-SpriteAsset (Join-Path $AssetDir 'mritto-map-v3.png') 384 96
+Test-SpriteAsset (Join-Path $AssetDir 'frat-map-v3.png') 384 96
+Test-SpriteAsset (Join-Path $AssetDir 'dantonlix-map-v1.png') 384 96
 
