@@ -109,14 +109,14 @@
 .player-fighter::before { right:-40px; top:150px; transform:scale(1.08); }
 .battle-slay,.battle-slay.sexy,.battle-slay.dantonlix { background-size:contain; background-position:center; background-repeat:no-repeat; }
 .battle-slay.sexy.normal { background-image:url("assets/sexyflex-normal-v4.png"); }
-.battle-slay.sexy.attack { background-image:url("assets/sexyflex-attack-v4.png"); }
+.battle-slay.sexy.attack { background-image:url("assets/sexyflex-attack-v5.png"); }
 .battle-slay.sexy.pose { background-image:url("assets/sexyflex-pose-v2.png"); background-position:center; transform:scale(1.08); }
-.battle-slay.sexy.hit { background-image:url("assets/sexyflex-hit-v4.png"); }
-.battle-slay.sexy.down { background-image:url("assets/sexyflex-down-v4.png"); }
+.battle-slay.sexy.hit { background-image:url("assets/sexyflex-hit-v5.png"); }
+.battle-slay.sexy.down { background-image:url("assets/sexyflex-down-v5.png"); }
 .battle-slay.dantonlix.normal { background-image:url("assets/dantonlix-normal-v4.png"); }
 .battle-slay.dantonlix.attack { background-image:url("assets/dantonlix-attack-v4.png"); }
-.battle-slay.dantonlix.hit { background-image:url("assets/dantonlix-hit-v4.png"); }
-.battle-slay.dantonlix.down { background-image:url("assets/dantonlix-down-v4.png"); }
+.battle-slay.dantonlix.hit { background-image:url("assets/dantonlix-hit-v5.png"); }
+.battle-slay.dantonlix.down { background-image:url("assets/dantonlix-down-v5.png"); }
 .battle-slay.veloursa { border:0; border-radius:0; background-color:transparent; }
 .battle-slay.veloursa.normal { background-image:url("assets/veloursa-normal-v2.png"); }
 .battle-slay.veloursa.attack { background-image:url("assets/veloursa-attack-v2.png"); }
