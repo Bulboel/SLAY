@@ -121,3 +121,9 @@
 .battle-slay.hit { transform:translateX(9px); }
 @media(max-width:700px){.fighter::before{width:170px;height:44px}.enemy-fighter::before{top:85px}.player-fighter::before{top:92px}}
 
+/* Le plateau reste entièrement visible sur les écrans larges, sans gaspiller les côtés. */
+@media(min-width:701px){
+  body{padding:12px}
+  .shell{width:min(100%,1240px,calc((100vh - 132px)*4/3))}
+}
+
