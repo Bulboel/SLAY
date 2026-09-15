@@ -108,14 +108,20 @@
 .enemy-fighter::before { left:-42px; top:142px; transform:scale(.82); }
 .player-fighter::before { right:-40px; top:150px; transform:scale(1.08); }
 .battle-slay,.battle-slay.sexy,.battle-slay.dantonlix { background-size:contain; background-position:center; background-repeat:no-repeat; }
-.battle-slay.sexy.normal { background-image:url("assets/sexyflex-normal-v3.png"); }
-.battle-slay.sexy.attack { background-image:url("assets/sexyflex-attack-v3.png"); }
-.battle-slay.sexy.hit { background-image:url("assets/sexyflex-hit-v3.png"); }
-.battle-slay.sexy.down { background-image:url("assets/sexyflex-down-v3.png"); }
-.battle-slay.dantonlix.normal { background-image:url("assets/dantonlix-normal-v3.png"); }
-.battle-slay.dantonlix.attack { background-image:url("assets/dantonlix-attack-v3.png"); }
-.battle-slay.dantonlix.hit { background-image:url("assets/dantonlix-hit-v3.png"); }
-.battle-slay.dantonlix.down { background-image:url("assets/dantonlix-down-v3.png"); }
+.battle-slay.sexy.normal { background-image:url("assets/sexyflex-normal-v4.png"); }
+.battle-slay.sexy.attack { background-image:url("assets/sexyflex-attack-v4.png"); }
+.battle-slay.sexy.pose { background-image:url("assets/sexyflex-pose-v1.png"); transform:scale(1.08); }
+.battle-slay.sexy.hit { background-image:url("assets/sexyflex-hit-v4.png"); }
+.battle-slay.sexy.down { background-image:url("assets/sexyflex-down-v4.png"); }
+.battle-slay.dantonlix.normal { background-image:url("assets/dantonlix-normal-v4.png"); }
+.battle-slay.dantonlix.attack { background-image:url("assets/dantonlix-attack-v4.png"); }
+.battle-slay.dantonlix.hit { background-image:url("assets/dantonlix-hit-v4.png"); }
+.battle-slay.dantonlix.down { background-image:url("assets/dantonlix-down-v4.png"); }
+.battle-slay.veloursa { border:0; border-radius:0; background-color:transparent; }
+.battle-slay.veloursa.normal { background-image:url("assets/veloursa-normal-v1.png"); }
+.battle-slay.veloursa.attack { background-image:url("assets/veloursa-attack-v1.png"); }
+.battle-slay.veloursa.hit { background-image:url("assets/veloursa-hit-v1.png"); }
+.battle-slay.veloursa.down { background-image:url("assets/veloursa-down-v1.png"); }
 .battle-slay.normal,.battle-slay.attack,.battle-slay.hit,.battle-slay.down { background-position:center; }
 .battle-slay.attack { transform:translateX(-12px) scale(1.06); }
 .battle-slay.hit { transform:translateX(9px); }
@@ -126,4 +132,7 @@
   body{padding:12px}
   .shell{width:min(100%,1240px,calc((100vh - 132px)*4/3))}
 }
+
+.battle-screen.indoors .battle-sky{background:linear-gradient(#20183277,#20183222),url("assets/home-interior-v1.png") center/cover no-repeat}
+.battle-screen.indoors .fighter::before{background:radial-gradient(ellipse,#d9bf8f 0 48%,#765c42 51% 61%,transparent 63%)}
 
