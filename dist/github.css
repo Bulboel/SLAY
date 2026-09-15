@@ -75,7 +75,7 @@
 .battle-slay { width:150px; height:145px; border:0; border-radius:0; background-color:transparent; background-repeat:no-repeat; background-size:200% 200%; box-shadow:none; filter:drop-shadow(0 10px 3px #315f4266); transition:transform .18s,filter .18s; }
 .battle-slay.sexy { width:230px; height:205px; border-radius:0; background-color:transparent; background-image:url("assets/sexyflex-battle-v2.png"); }
 .battle-slay.dantonlix { width:210px; height:195px; background-image:url("assets/dantonlix-battle-v2.png"); }
-.battle-slay.veloursa { border:7px solid #9b4e80; border-radius:45%; background:#e97eb6; }
+.battle-slay.velourquine { border:7px solid #9b4e80; border-radius:45%; background:#e97eb6; }
 .battle-slay.normal { background-position:0 0; }
 .battle-slay.attack { background-position:100% 0; transform:translateX(-8px) scale(1.05); }
 .battle-slay.hit { background-position:0 100%; filter:drop-shadow(0 10px 3px #315f4266) brightness(.75) saturate(.5); transform:translateX(8px); }
@@ -117,11 +117,11 @@
 .battle-slay.dantonlix.attack { background-image:url("assets/dantonlix-attack-v4.png"); }
 .battle-slay.dantonlix.hit { background-image:url("assets/dantonlix-hit-v5.png"); }
 .battle-slay.dantonlix.down { background-image:url("assets/dantonlix-down-v5.png"); }
-.battle-slay.veloursa { border:0; border-radius:0; background-color:transparent; }
-.battle-slay.veloursa.normal { background-image:url("assets/veloursa-normal-v2.png"); }
-.battle-slay.veloursa.attack { background-image:url("assets/veloursa-attack-v2.png"); }
-.battle-slay.veloursa.hit { background-image:url("assets/veloursa-hit-v2.png"); }
-.battle-slay.veloursa.down { background-image:url("assets/veloursa-down-v2.png"); }
+.battle-slay.velourquine { border:0; border-radius:0; background-color:transparent; }
+.battle-slay.velourquine.normal { background-image:url("assets/velourquine-normal-v1.png"); }
+.battle-slay.velourquine.attack { background-image:url("assets/velourquine-attack-v1.png"); }
+.battle-slay.velourquine.hit { background-image:url("assets/velourquine-hit-v1.png"); }
+.battle-slay.velourquine.down { background-image:url("assets/velourquine-down-v1.png"); }
 .battle-slay.normal,.battle-slay.attack,.battle-slay.hit,.battle-slay.down { background-position:center; }
 .battle-slay.attack { transform:translateX(-12px) scale(1.06); }
 .battle-slay.hit { transform:translateX(9px); }

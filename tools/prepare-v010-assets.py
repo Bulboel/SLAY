@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "dist" / "assets"
 
 
-def extract_character(source: str) -> None:
+def extract_character(source: str, target: str = "sexyflex-map-v5.png", remove_enclosed_checker: bool = False) -> None:
     image = Image.open(source).convert("RGBA")
     width, height = image.size
     pixels = image.load()
@@ -22,7 +22,7 @@ def extract_character(source: str) -> None:
         for x in range(width):
             r, g, b, a = pixels[x, y]
             neutral = max(r, g, b) - min(r, g, b) < 22
-            middle_grey = 70 < (r + g + b) / 3 < 245
+            middle_grey = 65 < (r + g + b) / 3
             if a < 8 or (neutral and middle_grey):
                 candidate[y * width + x] = 1
 
@@ -46,8 +46,9 @@ def extract_character(source: str) -> None:
 
     for y in range(height):
         for x in range(width):
-            if outside[y * width + x]:
-                r, g, b, _ = pixels[x, y]
+            r, g, b, _ = pixels[x, y]
+            enclosed_checker = remove_enclosed_checker and max(r, g, b) - min(r, g, b) < 22 and (r + g + b) / 3 > 170
+            if outside[y * width + x] or enclosed_checker:
                 pixels[x, y] = (r, g, b, 0)
 
     bbox = image.getchannel("A").getbbox()
@@ -55,7 +56,7 @@ def extract_character(source: str) -> None:
         raise RuntimeError("Sexyflex extraction produced an empty image")
     image = image.crop(bbox)
     image.thumbnail((512, 512), Image.Resampling.LANCZOS)
-    image.save(ASSETS / "sexyflex-map-v5.png", "PNG", optimize=True)
+    image.save(ASSETS / target, "PNG", optimize=True)
 
 
 def crop_nicky() -> None:
