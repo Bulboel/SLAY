@@ -36,7 +36,7 @@
 .character-creator label { display:grid; gap:5px; color:#fff8df; font-size:.67rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; text-shadow:0 2px 3px #000; }
 .character-creator select { border:2px solid #ffe76a; border-radius:7px; background:#201832e8; color:#fff8df; padding:8px; font:800 .82rem inherit; }
 .dialogue { left:16px; right:16px; bottom:16px; min-height:156px; grid-template-columns:132px 1fr; }
-.portrait { min-height:128px; background-position:center 15%!important; }
+.portrait { min-height:128px; background-position:center 15%; background-repeat:no-repeat; }
 .speech p { font-size:1.06rem; }
 
 .inventory { display: flex; align-items: center; gap: 7px; }
